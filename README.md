@@ -8,7 +8,7 @@ PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex
 Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following command:
 
 ```powershell
-PS > Install-BoxstarterPackage -PackageName https://github.com/mostwantedduck/setup-machines/raw/main/setup-windows.choco
+PS > Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/mostwantedduck/setup-machines/main/windows10.choco
 ```
  
 On the Kali VM, open a terminal and run:
