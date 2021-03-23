@@ -29,11 +29,11 @@ choco install microsoft-windows-terminal --pre
 Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"
 Expand-Archive -Path "$env:TEMP\dnSpy-netframework.zip" -DestinationPath C:\tools\dnSpy
 
-Invoke-WebRequest -Uri 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64' -OutFile "C:\tools"
-Invoke-WebRequest -Uri 'https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64' -OutFile "C:\tools"
-Invoke-WebRequest -Uri 'https://jitpack.io/com/github/frohoff/ysoserial/master-SNAPSHOT/ysoserial-master-SNAPSHOT.jar' -OutFile "C:\tools"
-Invoke-WebRequest -Uri 'https://github.com/int0x33/nc.exe/raw/master/nc.exe' -OutFile "C:\tools"
-Invoke-WebRequest -Uri 'https://github.com/int0x33/nc.exe/raw/master/nc64.exe' -OutFile "C:\tools"
+Invoke-WebRequest -Uri 'https://github.com/pwntester/ysoserial.net/releases/download/v1.34/ysoserial-1.34.zip' -OutFile "$env:TEMP\ysoserial-1.34.zip"
+Expand-Archive -Path "$env:TEMP\ysoserial-1.34.zip" -DestinationPath C:\tools\ysoserial-1.34
+
+# Invoke-WebRequest -Uri 'https://github.com/int0x33/nc.exe/raw/master/nc.exe' -OutFile "$env:TEMP\nc.exe"
+# Invoke-WebRequest -Uri 'https://github.com/int0x33/nc.exe/raw/master/nc64.exe' -OutFile "$env:TEMP\nc64.exe"
 
 git clone https://github.com/Aetsu/OffensivePipeline.git C:\tools\OffensivePipeline
 git clone https://github.com/BloodHoundAD/SharpHound3.git C:\tools\SharpHound3
