@@ -82,14 +82,15 @@ netsh interface ip set address "Ethernet1" static 192.168.10.101 255.255.255.0 1
 #route add -p 10.9.0.0 mask 255.255.255.0 192.168.152.100
 #route add -p 10.10.110.0 mask 255.255.255.0 192.168.152.100
 
-Add-Content C:\Windows\System32\drivers\etc\hosts "192.168.10.100 kali"
+Add-Content C:\Windows\System32\drivers\etc\hosts "192.168.10.100 lake"
 
 # UI
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1" -Force
 Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableExpandToOpenFolder -EnableShowRibbon
 Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\tools.lnk" -targetPath C:\tools\
 Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\Neo4j.lnk" -targetPath "C:\tools\Neo4j\bin\neo4j.bat" -arguments "console" -runAsAdmin
-Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\HFS.lnk" -targetPath "C:\ProgramData\chocolatey\bin\hfs.exe" -runAsAdmin
+Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\HFS.lnk" -targetPath "C:\ProgramData\chocolatey\bin\hfs.exe"
+Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\BloodHound.lnk" -targetPath "C:\tools\BloodHound\BloodHound.exe"
 
 New-Item -Path C:\ -Name BGInfo -ItemType Directory -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri 'https://github.com/mostwantedduck/setup-machines/raw/main/wallpaper-win10.jpg' -OutFile "C:\BGInfo\wallpaper.jpg"
