@@ -13,4 +13,6 @@ PS > Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/mo
  
 On the Kali VM, open a terminal and run:
 
+```bash
 kali@kali:~$ curl -s https://raw.githubusercontent.com/mostwantedduck/setup-machines/main/kali.sh | bash 
+```
