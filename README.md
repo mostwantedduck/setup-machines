@@ -1,4 +1,4 @@
-On the Windows VM, open a PowerShell prompt as Administrator and run:
+On the Windows VM, open a powershell prompt as **Administrator** and run:
 
 ```powershell
 PS > Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
@@ -11,3 +11,6 @@ Once the installation has completed, a Boxstarter Shell icon will appear on your
 PS > Install-BoxstarterPackage -PackageName https://github.com/mostwantedduck/setup-machines/raw/main/setup-windows.choco
 ```
  
+On the Kali VM, open a terminal and run:
+
+kali@kali:~$ curl -s https://raw.githubusercontent.com/mostwantedduck/setup-machines/main/kali.sh | bash 
