@@ -30,7 +30,7 @@ sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egre
 sudo git clone https://github.com/pentestmonkey/windows-privesc-check /opt/windows-privesc-check
 sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite /opt/privilege-escalation-awesome-scripts-suite
 sudo git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester /opt/Windows-Exploit-Suggester
-sudo git clone git clone https://github.com/mzet-/linux-exploit-suggester /opt/linux-exploit-suggester
+sudo git clone https://github.com/mzet-/linux-exploit-suggester /opt/linux-exploit-suggester
 sudo git clone https://github.com/jondonas/linux-exploit-suggester-2 /opt/linux-exploit-suggester-2
 sudo git clone https://github.com/PowerShellMafia/PowerSploit /opt/PowerSploit
 sudo git clone https://github.com/internetwache/GitTools /opt/GitTools
