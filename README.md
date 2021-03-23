@@ -1,16 +1,13 @@
-### Hi there 👋
+On the Windows VM, open a PowerShell prompt as Administrator and run:
 
-<!--
-**mostwantedduck/mostwantedduck** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+```powershell
+PS > Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
+PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force
+```
 
-Here are some ideas to get you started:
+Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following command:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```powershell
+PS > Install-BoxstarterPackage -PackageName https://github.com/mostwantedduck/mostwantedduck/raw/main/setup-windows.choco
+```
+ 
