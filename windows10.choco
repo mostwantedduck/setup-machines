@@ -65,7 +65,9 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main
 ## Visual Studio
 # Error: "Request was blocked due to exceeding usage of resource 'Count' in namespace 'AnonymousId'
 # Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VisualStudioClient/vsextensions/MicrosoftVisualStudio2017InstallerProjects/0.9.6/vspackage' -OutFile "$Downloads\InstallerProjects.vsix"
-Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
+
+# Opt to download manually and install it after VS 2019 installation
+# Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
 
 Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
