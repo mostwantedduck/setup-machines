@@ -78,6 +78,9 @@ Install-Module GPRegistryPolicy -Force
 ## VMware
 netsh interface ip set address "Ethernet1" static 192.168.10.101 255.255.255.0 192.168.10.100
 
+# HTB
+route add -p 10.10.0.0 mask 255.255.255.0 192.168.10.100
+
 #route add -p 10.8.0.0 mask 255.255.255.0 192.168.152.100
 #route add -p 10.9.0.0 mask 255.255.255.0 192.168.152.100
 #route add -p 10.10.110.0 mask 255.255.255.0 192.168.152.100
