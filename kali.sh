@@ -38,7 +38,7 @@ sudo git clone https://github.com/maurosoria/dirsearch /opt/dirsearch
 sudo git clone https://github.com/rebootuser/LinEnum /opt/LinEnum
 sudo git clone https://github.com/diego-treitos/linux-smart-enumeration /opt/linux-smart-enumeration
 
-chmod +x /opt/dirsearch/dirsearch.py
+sudo chmod +x /opt/dirsearch/dirsearch.py
 sudo ln -s /opt/dirsearch/dirsearch.py /bin/dirsearch
 
 sudo gem install evil-winrm
