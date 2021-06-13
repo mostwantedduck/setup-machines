@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt -y update
-sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap
+sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap exiftool
 
 sudo systemctl disable network-manager.service
 echo -en "\n\nauto eth0\niface eth0 inet dhcp\nauto eth1\niface eth1 inet static\n\taddress 192.168.10.100\n\tnetmask 255.255.255.0" | sudo tee -a /etc/network/interfaces
@@ -37,9 +37,17 @@ sudo git clone https://github.com/internetwache/GitTools /opt/GitTools
 sudo git clone https://github.com/maurosoria/dirsearch /opt/dirsearch
 sudo git clone https://github.com/rebootuser/LinEnum /opt/LinEnum
 sudo git clone https://github.com/diego-treitos/linux-smart-enumeration /opt/linux-smart-enumeration
+sudo git clone https://github.com/byt3bl33d3r/OffensiveNim.git /opt/OffensiveNim
+sudo git clone https://github.com/samratashok/nishang.git /opt/nishang
+sudo git clone https://github.com/phra/PEzor.git /opt/PEzor
+sudo git clone https://github.com/3gstudent/Worse-PDF.git /opt/Worse-PDF
+sudo git clone https://github.com/dafthack/MailSniper.git /opt/MailSniper
+sudo git clone https://github.com/fox-it/BloodHound.py.git /opt/BloodHound.py
+sudo git clone https://github.com/quentinhardy/msdat.git /opt/msdat
+sudo git clone https://github.com/infosecn1nja/MaliciousMacroMSBuild.git /opt/MaliciousMacroMSBuild
+sudo git clone https://github.com/FSecureLABS/wePWNise /opt/wePWNise
 
-sudo chmod +x /opt/dirsearch/dirsearch.py
-sudo ln -s /opt/dirsearch/dirsearch.py /bin/dirsearch
+
 
 sudo gem install evil-winrm
 
