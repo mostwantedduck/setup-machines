@@ -21,39 +21,55 @@ sudo apt -y update
 sudo apt -y install dotnet-sdk-3.1 dnsutils
 rm packages-microsoft-prod.deb
 
-sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
-sudo git clone https://github.com/rbsec/dnscan.git /opt/dnscan
-sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
-sudo git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
-sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
-sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
-sudo git clone https://github.com/pentestmonkey/windows-privesc-check /opt/windows-privesc-check
-sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite /opt/privilege-escalation-awesome-scripts-suite
-sudo git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester /opt/Windows-Exploit-Suggester
-sudo git clone https://github.com/mzet-/linux-exploit-suggester /opt/linux-exploit-suggester
-sudo git clone https://github.com/jondonas/linux-exploit-suggester-2 /opt/linux-exploit-suggester-2
-sudo git clone https://github.com/PowerShellMafia/PowerSploit /opt/PowerSploit
-sudo git clone https://github.com/internetwache/GitTools /opt/GitTools
-sudo git clone https://github.com/maurosoria/dirsearch /opt/dirsearch
-sudo git clone https://github.com/rebootuser/LinEnum /opt/LinEnum
-sudo git clone https://github.com/diego-treitos/linux-smart-enumeration /opt/linux-smart-enumeration
-sudo git clone https://github.com/byt3bl33d3r/OffensiveNim.git /opt/OffensiveNim
-sudo git clone https://github.com/samratashok/nishang.git /opt/nishang
-sudo git clone https://github.com/phra/PEzor.git /opt/PEzor
-sudo git clone https://github.com/3gstudent/Worse-PDF.git /opt/Worse-PDF
-sudo git clone https://github.com/dafthack/MailSniper.git /opt/MailSniper
-sudo git clone https://github.com/fox-it/BloodHound.py.git /opt/BloodHound.py
-sudo git clone https://github.com/quentinhardy/msdat.git /opt/msdat
-sudo git clone https://github.com/infosecn1nja/MaliciousMacroMSBuild.git /opt/MaliciousMacroMSBuild
-sudo git clone https://github.com/FSecureLABS/wePWNise /opt/wePWNise
-sudo git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
-sudo git clone https://github.com/NetSPI/PowerUpSQL.git /opt/PowerUpSQL
+# CHANGE IT
+sudo chown -R daniel:daniel /opt
 
-sudo curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz -o /opt/binaries
-sudo curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_windows_amd64.gz -o /opt/binaries
-sudo curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 -o /opt/binaries
-sudo curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64 -o /opt/binaries
-sudo curl https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20210531/mimikatz_trunk.zip -o /opt/binaries
+git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
+git clone https://github.com/rbsec/dnscan.git /opt/dnscan
+git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
+git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
+git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
+git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
+git clone https://github.com/pentestmonkey/windows-privesc-check /opt/windows-privesc-check
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite /opt/privilege-escalation-awesome-scripts-suite
+git clone https://github.com/AonCyberLabs/Windows-Exploit-Suggester /opt/Windows-Exploit-Suggester
+git clone https://github.com/mzet-/linux-exploit-suggester /opt/linux-exploit-suggester
+git clone https://github.com/jondonas/linux-exploit-suggester-2 /opt/linux-exploit-suggester-2
+git clone https://github.com/PowerShellMafia/PowerSploit /opt/PowerSploit
+git clone https://github.com/internetwache/GitTools /opt/GitTools
+git clone https://github.com/maurosoria/dirsearch /opt/dirsearch
+git clone https://github.com/rebootuser/LinEnum /opt/LinEnum
+git clone https://github.com/diego-treitos/linux-smart-enumeration /opt/linux-smart-enumeration
+git clone https://github.com/byt3bl33d3r/OffensiveNim.git /opt/OffensiveNim
+git clone https://github.com/samratashok/nishang.git /opt/nishang
+git clone https://github.com/phra/PEzor.git /opt/PEzor
+git clone https://github.com/3gstudent/Worse-PDF.git /opt/Worse-PDF
+git clone https://github.com/dafthack/MailSniper.git /opt/MailSniper
+git clone https://github.com/fox-it/BloodHound.py.git /opt/BloodHound.py
+git clone https://github.com/quentinhardy/msdat.git /opt/msdat
+git clone https://github.com/infosecn1nja/MaliciousMacroMSBuild.git /opt/MaliciousMacroMSBuild
+git clone https://github.com/FSecureLABS/wePWNise /opt/wePWNise
+git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
+git clone https://github.com/NetSPI/PowerUpSQL.git /opt/PowerUpSQL
+
+curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz -o /opt/binaries/chisel_1.7.6_linux_amd64.gz
+curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_windows_amd64.gz -o /opt/binaries/chisel_1.7.6_windows_amd64.gz
+curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 -o /opt/binaries/pspy32
+curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64 -o /opt/binaries/pspy64
+curl https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20210531/mimikatz_trunk.zip -o /opt/binaries/mimikatz_trunk.zip
+
+
+tee -a /opt/update-repos.sh > /dev/null <<EOT
+#! /usr/bin/env bash
+for dir in ./*/
+do
+  cd ${dir}
+  git status >/dev/null 2>&1
+  # check if exit status of above was 0, indicating we're in a git repo
+  [ $(echo $?) -eq 0 ] && echo "Updating ${dir%*/}..." && git pull
+  cd ..
+done
+EOT
 
 sudo gem install evil-winrm
 
