@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt -y update
-sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap exiftool jq nim
+sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap exiftool jq nim python3-virtualenv libxml2-dev libxslt1-dev
 
 sudo systemctl disable network-manager.service
 echo -en "\n\nauto eth0\niface eth0 inet dhcp\nauto eth1\niface eth1 inet static\n\taddress 192.168.10.100\n\tnetmask 255.255.255.0" | sudo tee -a /etc/network/interfaces
