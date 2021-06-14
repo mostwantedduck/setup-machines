@@ -26,9 +26,9 @@ sudo chown -R daniel:daniel /opt
 
 git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
 git clone https://github.com/rbsec/dnscan.git /opt/dnscan
-git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
+git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck
 git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
-git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
+git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit
 git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
 git clone https://github.com/pentestmonkey/windows-privesc-check /opt/windows-privesc-check
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite /opt/privilege-escalation-awesome-scripts-suite
@@ -61,14 +61,7 @@ curl https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20210531/mim
 
 tee -a /opt/update-repos.sh > /dev/null <<EOT
 #! /usr/bin/env bash
-for dir in ./*/
-do
-  cd ${dir}
-  git status >/dev/null 2>&1
-  # check if exit status of above was 0, indicating we're in a git repo
-  [ $(echo $?) -eq 0 ] && echo "Updating ${dir%*/}..." && git pull
-  cd ..
-done
+find /opt -type d -depth 1 -exec echo git --git-dir={}/.git --work-tree=$PWD/{} status \;
 EOT
 
 chmod +x /opt/update-repos.sh
@@ -76,5 +69,11 @@ chmod +x /opt/update-repos.sh
 sudo gem install evil-winrm
 
 sudo systemctl enable ssh.service
+
+cd /opt/SprayingToolkit
+sudo pip3 install -r requirements.txt
+
+cd /opt/spoofcheck
+sudo pip3 install -r requirements.txt
 
 sudo reboot
