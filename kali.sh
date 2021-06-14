@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt -y update
-sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap exiftool jq
+sudo apt -y install iptables-persistent netfilter-persistent python3-pip steghide rlwrap exiftool jq nim
 
 sudo systemctl disable network-manager.service
 echo -en "\n\nauto eth0\niface eth0 inet dhcp\nauto eth1\niface eth1 inet static\n\taddress 192.168.10.100\n\tnetmask 255.255.255.0" | sudo tee -a /etc/network/interfaces
@@ -46,8 +46,14 @@ sudo git clone https://github.com/fox-it/BloodHound.py.git /opt/BloodHound.py
 sudo git clone https://github.com/quentinhardy/msdat.git /opt/msdat
 sudo git clone https://github.com/infosecn1nja/MaliciousMacroMSBuild.git /opt/MaliciousMacroMSBuild
 sudo git clone https://github.com/FSecureLABS/wePWNise /opt/wePWNise
+sudo git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
+sudo git clone https://github.com/NetSPI/PowerUpSQL.git /opt/PowerUpSQL
 
-
+sudo curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz -o /opt/binaries
+sudo curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_windows_amd64.gz -o /opt/binaries
+sudo curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 -o /opt/binaries
+sudo curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy64 -o /opt/binaries
+sudo curl https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20210531/mimikatz_trunk.zip -o /opt/binaries
 
 sudo gem install evil-winrm
 
