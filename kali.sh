@@ -71,6 +71,8 @@ do
 done
 EOT
 
+chmod +x /opt/update-repos.sh
+
 sudo gem install evil-winrm
 
 sudo systemctl enable ssh.service
