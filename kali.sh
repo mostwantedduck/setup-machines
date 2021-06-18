@@ -52,6 +52,8 @@ git clone https://github.com/FSecureLABS/wePWNise /opt/wePWNise
 git clone https://github.com/BloodHoundAD/BloodHound.git /opt/BloodHound
 git clone https://github.com/NetSPI/PowerUpSQL.git /opt/PowerUpSQL
 
+mkdir /opt/binaries
+
 curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_linux_amd64.gz -o /opt/binaries/chisel_1.7.6_linux_amd64.gz
 curl https://github.com/jpillora/chisel/releases/download/v1.7.6/chisel_1.7.6_windows_amd64.gz -o /opt/binaries/chisel_1.7.6_windows_amd64.gz
 curl https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32 -o /opt/binaries/pspy32
@@ -71,9 +73,13 @@ sudo gem install evil-winrm
 sudo systemctl enable ssh.service
 
 cd /opt/SprayingToolkit
+sudo virtualenv -p /usr/bin/python venv
+source venv/bin/activate
 sudo pip3 install -r requirements.txt
 
 cd /opt/spoofcheck
+sudo virtualenv -p /usr/bin/python venv
+source venv/bin/activate
 sudo pip3 install -r requirements.txt
 
-sudo reboot
+reboot
